@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#7dbd1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <title>BMI Calculator</title>
+    
+    <meta name="description" content="BMI Calculator - Calculate your Body Mass Index instantly. Free online BMI calculator with metric and imperial units.">
+    <meta name="keywords" content="bmi, calculator, body mass index, health, fitness, weight tracker">
+    <meta name="author" content="Lemuel Owusu-Ansah">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="BMI Calculator">
+    <meta property="og:description" content="Calculate your Body Mass Index instantly. Free online BMI calculator.">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="BMI Calculator">
+    <meta name="twitter:description" content="Calculate your BMI instantly.">
+    
+    <link rel="canonical" href="https://your-domain.com/bmi-calculator">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Merriweather:wght@700;900&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-shell">
+        <div class="background-veil"></div>
+        <div class="container-fluid px-4 py-6 position-relative z-10">
+            <div class="row justify-content-center">
+                <div class="col-xl-10 col-12">
+                    <div class="top-rule"></div>
+                    
+                    <header class="py-4 py-lg-5">
+                        <div class="row align-items-end g-4">
+                            <div class="col-lg-8">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <span class="icon-badge">
+                                        <i class="bi bi-activity"></i>
+                                    </span>
+                                    <span class="eyebrow-label">Body Metrics / 01</span>
+                                </div>
+                                <h1 class="page-title">Know your number. Own your health.</h1>
+                                <p class="page-description">Use your height and weight to calculate your Body Mass Index in seconds.</p>
+                            </div>
+                            <div class="col-lg-4 text-lg-end">
+                                <div class="d-flex align-items-center gap-2 justify-content-lg-end">
+                                    <i class="bi bi-arrows-move text-acid"></i>
+                                    <small class="motion-note">Move across the calculator to shift its perspective.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+
+                    <main class="py-4">
+                        <div class="row g-5 align-items-start">
+                            <div class="col-lg-7">
+                                <div class="calculator-surface" id="calculatorSurface">
+                                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 pb-4 border-bottom border-secondary">
+                                        <div>
+                                            <p class="calculator-kicker">Personal calculation</p>
+                                            <h2 class="calculator-title">Calculate your BMI</h2>
+                                        </div>
+                                        <div class="unit-switch d-flex p-1 rounded-3" role="group">
+                                            <button class="unit-button active" id="metricTab" data-unit="metric">Metric</button>
+                                            <button class="unit-button" id="imperialTab" data-unit="imperial">Imperial</button>
+                                        </div>
+                                    </div>
+
+                                    <form id="metricForm" class="measurement-form pt-4">
+                                        <div class="row g-4">
+                                            <div class="col-sm-6">
+                                                <label class="form-label fw-semibold text-light">Your weight</label>
+                                                <div class="position-relative">
+                                                    <input type="number" class="measurement-input" id="metricWeight" min="1" max="500" step="0.1" placeholder="e.g. 68.5">
+                                                    <span class="measure-unit">KG</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label class="form-label fw-semibold text-light">Your height</label>
+                                                <div class="position-relative">
+                                                    <input type="number" class="measurement-input" id="metricHeight" min="30" max="300" step="0.1" placeholder="e.g. 172">
+                                                    <span class="measure-unit">CM</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="metricError" class="error-message mt-3 d-none"></div>
+                                        <div class="d-flex flex-wrap gap-3 mt-4">
+                                            <button type="submit" class="btn-action">
+                                                <i class="bi bi-calculator"></i> Calculate BMI
+                                            </button>
+                                            <button type="button" class="btn-reset" id="resetMetric">Reset</button>
+                                        </div>
+                                    </form>
+
+                                    <form id="imperialForm" class="measurement-form pt-4 d-none">
+                                        <div class="row g-4">
+                                            <div class="col-sm-4">
+                                                <label class="form-label fw-semibold text-light">Your weight</label>
+                                                <div class="position-relative">
+                                                    <input type="number" class="measurement-input" id="imperialWeight" min="1" max="1100" step="0.1" placeholder="e.g. 151">
+                                                    <span class="measure-unit">LB</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label class="form-label fw-semibold text-light">Height (feet)</label>
+                                                <div class="position-relative">
+                                                    <input type="number" class="measurement-input" id="imperialFeet" min="1" max="8" step="1" placeholder="e.g. 5">
+                                                    <span class="measure-unit">FT</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label class="form-label fw-semibold text-light">Height (inches)</label>
+                                                <div class="position-relative">
+                                                    <input type="number" class="measurement-input" id="imperialInches" min="0" max="11.9" step="0.1" placeholder="e.g. 8">
+                                                    <span class="measure-unit">IN</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="imperialError" class="error-message mt-3 d-none"></div>
+                                        <div class="d-flex flex-wrap gap-3 mt-4">
+                                            <button type="submit" class="btn-action">
+                                                <i class="bi bi-calculator"></i> Calculate BMI
+                                            </button>
+                                            <button type="button" class="btn-reset" id="resetImperial">Reset</button>
+                                        </div>
+                                    </form>
+
+                                    <div id="resultBlock" class="result-block mt-4 pt-4 d-none">
+                                        <div class="row align-items-end g-3">
+                                            <div class="col-sm-7">
+                                                <p class="result-label">Your BMI score</p>
+                                                <p class="bmi-number" id="bmiNumber"></p>
+                                            </div>
+                                            <div class="col-sm-5 text-sm-end">
+                                                <p class="bmi-category" id="bmiCategory"></p>
+                                                <p class="bmi-description" id="bmiDescription"></p>
+                                            </div>
+                                        </div>
+                                        <div class="mt-4">
+                                            <div class="scale-track">
+                                                <span class="scale-marker" id="scaleMarker" style="left: 25%;"></span>
+                                            </div>
+                                            <div class="scale-labels">
+                                                <span>18.5</span>
+                                                <span>25</span>
+                                                <span>30</span>
+                                                <span>40+</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-5">
+                                <div class="guide-section">
+                                    <p class="guide-kicker">The reference</p>
+                                    <h2 class="guide-title">BMI ranges</h2>
+                                    <p class="guide-description">BMI is a simple screening measure based on height and weight.</p>
+                                    <div class="guide-list">
+                                        <div class="guide-item guide-underweight">
+                                            <p class="guide-label">Below 18.5 — Underweight</p>
+                                            <p class="guide-note">Below the standard healthy range.</p>
+                                        </div>
+                                        <div class="guide-item guide-healthy">
+                                            <p class="guide-label">18.5–24.9 — Healthy</p>
+                                            <p class="guide-note">Within the standard healthy range.</p>
+                                        </div>
+                                        <div class="guide-item guide-overweight">
+                                            <p class="guide-label">25–29.9 — Overweight</p>
+                                            <p class="guide-note">Above the standard healthy range.</p>
+                                        </div>
+                                        <div class="guide-item guide-obesity">
+                                            <p class="guide-label">30+ — Obesity</p>
+                                            <p class="guide-note">A result worth discussing with a professional.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+
+                    <footer class="border-top border-secondary py-4 mt-4">
+                        <p class="medical-note">BMI is a general guide and does not replace personalised medical advice.</p>
+                        <div class="d-flex flex-wrap justify-content-between gap-2 pt-3">
+                            <small class="footer-note">BMI = weight ÷ height² · Calculated locally in your browser.</small>
+                            <small class="footer-attribution">Apps by Lemuel Owusu-Ansah</small>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/bmi.js"></script>
+</body>
+</html>
