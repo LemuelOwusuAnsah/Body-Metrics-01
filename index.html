@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#7dbd1a">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="mobile-web-app-capable" content="yes">
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#7dbd1a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
     <title>BMI Calculator</title>
-    
-    <meta name="description" content="BMI Calculator - Calculate your Body Mass Index instantly. Free online BMI calculator with metric and imperial units.">
-    <meta name="keywords" content="bmi, calculator, body mass index, health, fitness, weight tracker">
-    <meta name="author" content="Lemuel Owusu-Ansah">
-    <meta name="robots" content="index, follow">
-    
-    <meta property="og:title" content="BMI Calculator">
-    <meta property="og:description" content="Calculate your Body Mass Index instantly. Free online BMI calculator.">
-    <meta property="og:type" content="website">
-    
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="BMI Calculator">
-    <meta name="twitter:description" content="Calculate your BMI instantly.">
-    
-    <link rel="canonical" href="https://your-domain.com/bmi-calculator">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Merriweather:wght@700;900&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+
+    <meta name="description" content="BMI Calculator - Track your Body Mass Index over time. Free online BMI calculator with history, charts, goals, and weekly reminders." />
+    <meta name="keywords" content="bmi, calculator, body mass index, health, fitness, weight tracker, bmi chart, weight goal" />
+    <meta name="author" content="Lemuel Owusu-Ansah" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="BMI Calculator - Track Your Health" />
+    <meta property="og:description" content="Track your BMI with history, charts, goals, and reminders." />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="BMI Calculator - Track Your Health" />
+    <meta name="twitter:description" content="Track your BMI with history, charts, goals, and reminders." />
+
+    <link rel="canonical" href="https://your-domain.com/bmi-calculator" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Merriweather:wght@700;900&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
 </head>
 <body>
     <div class="app-shell">
         <div class="background-veil"></div>
-        <div class="container-fluid px-4 py-6 position-relative z-10">
+        <div class="container-fluid px-4 py-4 position-relative">
             <div class="row justify-content-center">
                 <div class="col-xl-10 col-12">
                     <div class="top-rule"></div>
-                    
-                    <header class="py-4 py-lg-5">
+
+                    <header class="py-4">
                         <div class="row align-items-end g-4">
                             <div class="col-lg-8">
                                 <div class="d-flex align-items-center gap-3 mb-3">
@@ -52,7 +52,7 @@
                                     <span class="eyebrow-label">Body Metrics / 01</span>
                                 </div>
                                 <h1 class="page-title">Know your number. Own your health.</h1>
-                                <p class="page-description">Use your height and weight to calculate your Body Mass Index in seconds.</p>
+                                <p class="page-description">Track your BMI over time. Set goals, view progress charts, and get weekly reminders.</p>
                             </div>
                             <div class="col-lg-4 text-lg-end">
                                 <div class="d-flex align-items-center gap-2 justify-content-lg-end">
@@ -63,7 +63,7 @@
                         </div>
                     </header>
 
-                    <main class="py-4">
+                    <main class="pb-4">
                         <div class="row g-5 align-items-start">
                             <div class="col-lg-7">
                                 <div class="calculator-surface" id="calculatorSurface">
@@ -83,14 +83,14 @@
                                             <div class="col-sm-6">
                                                 <label class="form-label fw-semibold text-light">Your weight</label>
                                                 <div class="position-relative">
-                                                    <input type="number" class="measurement-input" id="metricWeight" min="1" max="500" step="0.1" placeholder="e.g. 68.5">
+                                                    <input type="number" class="measurement-input" id="metricWeight" min="1" max="500" step="0.1" placeholder="e.g. 68.5" />
                                                     <span class="measure-unit">KG</span>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
                                                 <label class="form-label fw-semibold text-light">Your height</label>
                                                 <div class="position-relative">
-                                                    <input type="number" class="measurement-input" id="metricHeight" min="30" max="300" step="0.1" placeholder="e.g. 172">
+                                                    <input type="number" class="measurement-input" id="metricHeight" min="30" max="300" step="0.1" placeholder="e.g. 172" />
                                                     <span class="measure-unit">CM</span>
                                                 </div>
                                             </div>
@@ -109,21 +109,21 @@
                                             <div class="col-sm-4">
                                                 <label class="form-label fw-semibold text-light">Your weight</label>
                                                 <div class="position-relative">
-                                                    <input type="number" class="measurement-input" id="imperialWeight" min="1" max="1100" step="0.1" placeholder="e.g. 151">
+                                                    <input type="number" class="measurement-input" id="imperialWeight" min="1" max="1100" step="0.1" placeholder="e.g. 151" />
                                                     <span class="measure-unit">LB</span>
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <label class="form-label fw-semibold text-light">Height (feet)</label>
                                                 <div class="position-relative">
-                                                    <input type="number" class="measurement-input" id="imperialFeet" min="1" max="8" step="1" placeholder="e.g. 5">
+                                                    <input type="number" class="measurement-input" id="imperialFeet" min="1" max="8" step="1" placeholder="e.g. 5" />
                                                     <span class="measure-unit">FT</span>
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <label class="form-label fw-semibold text-light">Height (inches)</label>
                                                 <div class="position-relative">
-                                                    <input type="number" class="measurement-input" id="imperialInches" min="0" max="11.9" step="0.1" placeholder="e.g. 8">
+                                                    <input type="number" class="measurement-input" id="imperialInches" min="0" max="11.9" step="0.1" placeholder="e.g. 8" />
                                                     <span class="measure-unit">IN</span>
                                                 </div>
                                             </div>
@@ -159,7 +159,96 @@
                                                 <span>40+</span>
                                             </div>
                                         </div>
+                                        <div id="categoryDetail" class="mt-4"></div>
                                     </div>
+                                </div>
+
+                                <div class="history-section">
+                                    <div class="history-header">
+                                        <span class="history-title"><i class="bi bi-clock-history"></i> History</span>
+                                        <div class="history-actions">
+                                            <button class="btn btn-sm btn-outline-secondary" id="clearHistoryBtn">
+                                                <i class="bi bi-trash3"></i> Clear All
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="history-list" id="historyList">
+                                        <div class="empty-history">No BMI records yet. Calculate your first BMI!</div>
+                                    </div>
+                                    <div class="history-stats" id="historyStats"></div>
+                                </div>
+
+                                <div class="chart-section">
+                                    <div class="chart-header">
+                                        <span class="chart-title"><i class="bi bi-graph-up"></i> Progress Chart</span>
+                                        <div class="chart-legend">
+                                            <span class="legend-item"><span class="legend-dot zone-under"></span> Under</span>
+                                            <span class="legend-item"><span class="legend-dot zone-healthy"></span> Healthy</span>
+                                            <span class="legend-item"><span class="legend-dot zone-over"></span> Over</span>
+                                            <span class="legend-item"><span class="legend-dot zone-obese"></span> Obese</span>
+                                        </div>
+                                    </div>
+                                    <div class="chart-container">
+                                        <canvas id="bmiChart"></canvas>
+                                    </div>
+                                </div>
+
+                                <div class="goal-section">
+                                    <div id="goalPanel"></div>
+                                </div>
+
+                                <div class="export-section">
+                                    <div class="chart-header">
+                                        <span class="chart-title"><i class="bi bi-download"></i> Export Data</span>
+                                    </div>
+                                    <div class="export-grid">
+                                        <button class="export-btn" id="exportCsvBtn">
+                                            <i class="bi bi-filetype-csv"></i> CSV
+                                        </button>
+                                        <button class="export-btn" id="exportJsonBtn">
+                                            <i class="bi bi-filetype-json"></i> JSON
+                                        </button>
+                                        <button class="export-btn" id="exportTxtBtn">
+                                            <i class="bi bi-filetype-txt"></i> TXT
+                                        </button>
+                                        <button class="export-btn" id="exportPdfBtn">
+                                            <i class="bi bi-filetype-pdf"></i> PDF
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="share-section">
+                                    <div class="chart-header">
+                                        <span class="chart-title"><i class="bi bi-share"></i> Share Result</span>
+                                    </div>
+                                    <div class="share-grid">
+                                        <button class="share-btn" id="shareResultBtn">
+                                            <i class="bi bi-share-fill"></i> Share
+                                        </button>
+                                        <button class="share-btn" id="shareLinkBtn">
+                                            <i class="bi bi-link-45deg"></i> Link
+                                        </button>
+                                        <button class="share-btn" id="shareWhatsappBtn">
+                                            <i class="bi bi-whatsapp"></i> WhatsApp
+                                        </button>
+                                        <button class="share-btn" id="shareTwitterBtn">
+                                            <i class="bi bi-twitter-x"></i> Twitter
+                                        </button>
+                                        <button class="share-btn" id="shareEmailBtn">
+                                            <i class="bi bi-envelope-fill"></i> Email
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="notification-section">
+                                    <div id="notificationPanel"></div>
+                                </div>
+
+                                <div class="categories-section">
+                                    <div class="chart-header">
+                                        <span class="chart-title"><i class="bi bi-grid-3x3-gap"></i> BMI Categories</span>
+                                    </div>
+                                    <div id="allCategoriesContainer"></div>
                                 </div>
                             </div>
 
@@ -204,6 +293,15 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/history.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/categories.js"></script>
+    <script src="js/goals.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/export.js"></script>
+    <script src="js/share.js"></script>
     <script src="js/bmi.js"></script>
 </body>
 </html>
